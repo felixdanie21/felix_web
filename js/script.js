@@ -25,27 +25,27 @@ function changeTab(tab) {
 changeTab('about');
 
 
-// // Inisialisasi EmailJS
-// (function(){
-//   emailjs.init("PiDiNPilGYwdNanb5"); // Ganti dengan public key Anda
-// })();
-//
-// // Fungsi untuk mengirim email
-// document.getElementById('contactForm').addEventListener('submit', function(event) {
-//   event.preventDefault(); // Mencegah pengiriman default
-//
-//   // Mengambil nilai input dari formulir
-//   const toEmail = document.getElementById('email').value;
-//   const message = document.getElementById('message').value;
-//
-//   // Mengirim email
-//   emailjs.send('wrtodme', 'tonh6hw', {
-//     to_email: toEmail,
-//     message: message,
-//   }).then(function() {
-//     alert('Pesan Anda telah dikirim!');
-//     document.getElementById('contactForm').reset(); // Reset formulir
-//   }, function(error) {
-//     alert('Gagal mengirim pesan: ' + JSON.stringify(error));
-//   });
-// });
+// Inisialisasi EmailJS
+(function(){
+  emailjs.init("uWQ4lPN2FuD9EJFQ2"); // Ganti dengan public key Anda
+})();
+
+// Fungsi untuk mengirim email
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Mencegah pengiriman default
+
+  // Mengambil nilai input dari formulir
+  const toEmail = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  // Mengirim email
+  emailjs.send('service_1jj6fpi', 'template_bfecw5c', {
+    to_email: toEmail,
+    message: message,
+  }).then(function() {
+    alert('Pesan Anda telah dikirim!');
+    document.getElementById('contactForm').reset(); // Reset formulir
+  }, function(error) {
+    alert('Gagal mengirim pesan: ' + JSON.stringify(error));
+  });
+});
