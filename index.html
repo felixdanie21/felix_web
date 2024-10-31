@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Animasi khusus */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.1/dist/aos.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+<!-- Navbar -->
+<nav class="bg-gray-800 p-4 sticky top-0 z-50" data-aos="fade-down">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="text-xl font-bold">Felix Daniel</div>
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <ul id="menu" class="hidden lg:flex space-x-4">
+            <li><a href="#about" class="hover:text-gray-300">About Me</a></li>
+            <li><a href="#skills" class="hover:text-gray-300">Skill</a></li>
+            <li><a href="#projects" class="hover:text-gray-300">Proyek</a></li>
+            <li><a href="#github" class="hover:text-gray-300">Proyek GitHub</a></li>
+            <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+    </div>
+    <!-- Hamburger Menu for Mobile -->
+    <div id="mobile-menu" class="hidden lg:hidden">
+        <ul class="flex flex-col space-y-2 mt-2 bg-gray-800 p-4">
+            <li><a href="#about" class="hover:text-gray-300">About Me</a></li>
+            <li><a href="#skills" class="hover:text-gray-300">Skill</a></li>
+            <li><a href="#projects" class="hover:text-gray-300">Proyek</a></li>
+            <li><a href="#github" class="hover:text-gray-300">Proyek GitHub</a></li>
+            <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="h-screen flex items-center justify-center bg-gradient-to-r from-indigo-600 to-blue-500">
+    <div class="text-center">
+        <h1 class="text-5xl font-extrabold mb-4 animate-bounce" data-aos="fade-up">Wellcome di Portofolio Felix 👋🏻 😊!</h1>
+        <p class="text-lg" data-aos="fade-up" data-aos-delay="200">Web Developer & AI Enthusiast</p>
+        <a href="#projects" class="mt-6 inline-block bg-white text-gray-800 py-2 px-4 rounded hover:bg-gray-300 transition transform hover:scale-105">Lihat Proyek Saya</a>
+    </div>
+</section>
+
+<section id="about" class="py-20">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">About Me</h2>
+        <div class="bg-gray-700 rounded-lg p-4 mx-auto w-40 h-40">
+            <img src="felix.jpg" alt="Felix Daniel" class="rounded-lg w-full h-full object-cover" />
+        </div>
+        <p class="text-lg mt-4" data-aos="fade-up" data-aos-delay="200">Graduated from Immanuel Christian University, Yogyakarta (2024), with experience as a web developer. In my 5th semester, I worked in a team to create a web Library Information System (SIP) for SMA Sanjaya XIV Nanggulan. Have completed my Final Project and have good commitment, motivation, and teamwork skills. Ready to contribute to the web development industry by combining knowledge, experience, and professionalism.
+        </p>
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="bg-gray-800 py-20">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Skill</h2>
+        <div class="flex flex-wrap justify-center">
+            <div class="m-4 p-4 bg-gray-700 rounded-lg shadow-lg w-60" data-aos="zoom-in" data-aos-delay="300">
+                <h3 class="text-xl font-semibold">PHP</h3>
+                <div class="bg-gray-600 rounded-full">
+                    <div class="bg-green-500 h-2 rounded-full" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="m-4 p-4 bg-gray-700 rounded-lg shadow-lg w-60" data-aos="zoom-in" data-aos-delay="300">
+                <h3 class="text-xl font-semibold">Python</h3>
+                <div class="bg-gray-600 rounded-full">
+                    <div class="bg-green-500 h-2 rounded-full" style="width: 65%;"></div>
+                </div>
+            </div>
+            <div class="m-4 p-4 bg-gray-700 rounded-lg shadow-lg w-60" data-aos="zoom-in" data-aos-delay="300">
+                <h3 class="text-xl font-semibold">JavaScript</h3>
+                <div class="bg-gray-600 rounded-full">
+                    <div class="bg-green-500 h-2 rounded-full" style="width: 40%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="py-20">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Proyek Saya</h2>
+        <p class="mb-6" data-aos="fade-up" data-aos-delay="200">Berikut beberapa proyek yang telah saya kerjakan.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gray-700 rounded-lg p-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative">
+                    <div class="bg-gray-600 h-40 rounded mb-4 overflow-hidden">
+                        <img src="ai.jpg" alt="Proyek 1" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 hover:opacity-100">
+                    </div>
+                    <h3 class="text-xl font-semibold">AI LLM</h3>
+                    <p>Proyek "AI Technology LLM" bertujuan mengembangkan model bahasa besar (LLM) berbasis kecerdasan buatan untuk meningkatkan interaksi manusia-komputer.</p>
+                </div>
+            </div>
+            <div class="bg-gray-700 rounded-lg p-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative">
+                    <div class="bg-gray-600 h-40 rounded mb-4 overflow-hidden">
+                        <img src="liturgi.jpg" alt="Proyek 2" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 hover:opacity-100">
+                    </div>
+                    <h3 class="text-xl font-semibold">Liturgi Gereja</h3>
+                    <p>Proyek "Liturgi Gereja" menggunakan framework CodeIgniter untuk mengembangkan platform digital yang memudahkan pengelolaan liturgi ibadah.</p>
+                </div>
+            </div>
+            <div class="bg-gray-700 rounded-lg p-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="relative">
+                    <div class="bg-gray-600 h-40 rounded mb-4 overflow-hidden">
+                        <img src="link-ke-gambar-proyek3.jpg" alt="Proyek 3" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 hover:opacity-100">
+                    </div>
+                    <h3 class="text-xl font-semibold">Nama Proyek 3</h3>
+                    <p>Deskripsi singkat tentang proyek ini.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- GitHub Projects Section -->
+<section id="github" class="py-20">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Proyek GitHub New</h2>
+        <div id="github-carousel" class="relative">
+            <div id="github-repos" class="flex transition-transform duration-300 ease-in-out"></div>
+            <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-l hover:bg-gray-600"> &lt; </button>
+            <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-r hover:bg-gray-600"> &gt; </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-800">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Contact Me</h2>
+        <form action="#" method="POST" class="flex flex-col items-center">
+            <input type="text" name="name" placeholder="Nama" class="mb-4 p-2 rounded bg-gray-700 text-white w-full max-w-xs" required>
+            <input type="email" name="email" placeholder="Email" class="mb-4 p-2 rounded bg-gray-700 text-white w-full max-w-xs" required>
+            <textarea name="message" placeholder="Pesan" class="mb-4 p-2 rounded bg-gray-700 text-white w-full max-w-xs" required></textarea>
+            <button type="submit" class="bg-blue-500 py-2 px-4 rounded hover:bg-blue-600 transition">Kirim Pesan</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 text-center bg-gray-900">
+    <p>&copy; 2024 Felix Daniel. Semua hak dilindungi.</p>
+</footer>
+
+<script>
+    // Inisialisasi AOS
+    AOS.init();
+
+    // Toggle mobile menu
+    $(document).ready(function() {
+        $('#menu-toggle').click(function() {
+            $('#mobile-menu').toggle();
+        });
+
+        $(document).mouseup(function(e) {
+            var container = $("#mobile-menu");
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                container.hide();
+            }
+        });
+    });
+
+    // Fetch GitHub Repos
+    $.ajax({
+        url: 'https://api.github.com/users/felixdanie21/repos',
+        method: 'GET',
+        success: function (repos) {
+            const items = repos.map(repo => `
+                <div class="bg-gray-700 rounded-lg p-4 w-60 flex-shrink-0 mx-2" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold mb-2">${repo.name}</h3>
+                    <p class="text-sm overflow-hidden text-ellipsis whitespace-nowrap" style="max-width: 220px;">${repo.description || 'Deskripsi tidak tersedia'}</p>
+                    <a href="${repo.html_url}" target="_blank" class="text-blue-500 mt-2 inline-block">Lihat di GitHub</a>
+                </div>
+            `).join('');
+
+            $('#github-repos').html(items);
+            $('#github-repos').css('transform', 'translateX(0)'); // Reset position
+        }
+    });
+
+    // Carousel functionality
+    let currentIndex = 0;
+    const visibleItems = 3; // Jumlah proyek yang terlihat
+    const itemWidth = 300; // Ganti sesuai dengan lebar item
+
+    $('#next-btn').click(function() {
+        const totalItems = $('#github-repos > div').length;
+        if (currentIndex < totalItems - visibleItems) {
+            currentIndex++;
+            $('#github-repos').css('transform', `translateX(-${currentIndex * itemWidth}px)`);
+        }
+    });
+
+    $('#prev-btn').click(function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            $('#github-repos').css('transform', `translateX(-${currentIndex * itemWidth}px)`);
+        }
+    });
+</script>
+</body>
+</html>
